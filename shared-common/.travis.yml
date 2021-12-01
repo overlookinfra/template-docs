@@ -1,0 +1,14 @@
+if: type = push AND branch IN (main)
+
+language: ruby
+
+script: ./build.sh
+sudo: false
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
+rvm:
+  - 2.7.1
